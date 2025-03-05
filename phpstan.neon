@@ -1,0 +1,24 @@
+parameters:
+    paths:
+        - app
+        - bootstrap
+        - config
+        - database
+        - resources/views
+        - routes
+        - tests
+
+    level: max
+    reportUnmatchedIgnoredErrors: false
+    checkMissingCallableSignature: true
+
+    ignoreErrors:
+        - '#will always evaluate to true#'
+
+    excludePaths:
+        analyse:
+            - app/Http/Controllers/Auth/*
+services:
+
+includes:
+    - phpstan-baseline.neon
